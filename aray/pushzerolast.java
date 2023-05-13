@@ -1,0 +1,31 @@
+package aray;
+
+
+public class pushzerolast {
+	public static void printarray(int[] arr)
+	{
+		int n=arr.length;
+	    for(int i=0;i<n;i++) {
+			System.out.println(arr[i]);
+		}
+	}
+  	public static void pushzero(int[] arr){
+  	 	int n=arr.length;
+        for (int i = 0; i < 4; i++) {
+            int temp = arr[0];
+            for (int j = 0; j < n - 1; j++)
+                arr[j] = arr[j + 1];
+    
+            arr[n - 1] = temp;
+        }
+		}
+
+		    
+		public static void main(String args[]) {
+		    int[] arr={5,6,7,8,9,12,34};
+		    pushzero(arr);
+		    printarray(arr);
+		    }
+
+	}
+
